@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#e9edf3">
+  <meta name="description" content="Responsive neumorphic login and registration interface">
+  <title>Login & Sign Up | Neumorphic UI</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <main class="auth-page">
+    <div class="scene" aria-hidden="true">
+      <span class="bubble bubble-one"></span>
+      <span class="bubble bubble-two"></span>
+      <span class="bubble bubble-three"></span>
+      <span class="bubble bubble-four"></span>
+    </div>
+
+    <section class="auth-layout" aria-label="Account access">
+      <div class="auth-card">
+        <div class="profile-badge" aria-hidden="true">
+          <svg viewBox="0 0 24 24" fill="currentColor" width="28" height="28"><path d="M12 12.25a4.25 4.25 0 1 0 0-8.5 4.25 4.25 0 0 0 0 8.5Zm0 2.25c-4.4 0-8 2.5-8 5.25V21h16v-1.25c0-2.75-3.6-5.25-8-5.25Z"/></svg>
+        </div>
+
+        <div class="card-heading">
+          <h1 id="form-title">Create Account</h1>
+          <p id="form-subtitle">Start your journey with us</p>
+        </div>
+
+        <form id="register-form" class="auth-form" novalidate>
+          <div class="field">
+            <label class="sr-only" for="register-name">Full Name</label>
+            <input id="register-name" name="name" type="text" placeholder="Full Name" autocomplete="name" minlength="2" required>
+          </div>
+          <div class="field">
+            <label class="sr-only" for="register-email">Email Address</label>
+            <input id="register-email" name="email" type="email" placeholder="Email Address" autocomplete="email" required>
+          </div>
+          <div class="field with-toggle">
+            <label class="sr-only" for="register-password">Password</label>
+            <input id="register-password" name="password" type="password" placeholder="Password" autocomplete="new-password" minlength="8" required>
+            <button class="show-password" type="button" data-toggle-password="register-password" aria-label="Show password" aria-pressed="false"></button>
+          </div>
+          <div class="field with-toggle">
+            <label class="sr-only" for="register-confirm">Confirm Password</label>
+            <input id="register-confirm" name="confirm" type="password" placeholder="Confirm Password" autocomplete="new-password" minlength="8" required>
+            <button class="show-password" type="button" data-toggle-password="register-confirm" aria-label="Show password confirmation" aria-pressed="false"></button>
+          </div>
+          <p id="register-status" class="form-status" aria-live="polite"></p>
+          <button type="submit" class="primary-button">CREATE ACCOUNT</button>
+        </form>
+
+        <form id="login-form" class="auth-form" hidden novalidate>
+          <div class="field">
+            <label class="sr-only" for="login-email">Email Address</label>
+            <input id="login-email" name="email" type="email" placeholder="Email Address" autocomplete="email" required>
+          </div>
+          <div class="field with-toggle">
+            <label class="sr-only" for="login-password">Password</label>
+            <input id="login-password" name="password" type="password" placeholder="Password" autocomplete="current-password" required>
+            <button class="show-password" type="button" data-toggle-password="login-password" aria-label="Show password" aria-pressed="false"></button>
+          </div>
+          <p id="login-status" class="form-status" aria-live="polite"></p>
+          <button type="submit" class="primary-button">LOGIN</button>
+        </form>
+      </div>
+
+      <div class="switch-row">
+        <span id="switch-prompt">Already have an account?</span>
+        <button id="switch-auth" type="button" class="switch-button" aria-controls="login-form register-form">
+          <span id="switch-label">Log in</span>
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" width="19" height="19" aria-hidden="true"><path d="M19 12H5m7-7-7 7 7 7"/></svg>
+        </button>
+      </div>
+      <p class="demo-note">UI demo only · No account data is stored or sent</p>
+    </section>
+  </main>
+</body>
+</html>
